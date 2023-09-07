@@ -1,0 +1,91 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* All */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* Header Section */
+header.navbar-container {
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: #282424;
+}
+
+header.navbar-container .navbar-logo img {
+  width: 210px;
+}
+
+header.navbar-container .navbar-list ul {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+header.navbar-container .navbar-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .navbar-list li a {
+  padding: 8px 0;
+  font-size: 1.02rem;
+  font-weight: 550;
+  text-decoration: none;
+  color: #f9f7fc;
+  border-bottom: 1.7px solid #282424;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+header.navbar-container .navbar-list li a:hover {
+  font-weight: 700;
+  border-bottom: 1.7px solid #93735b;
+}
+
+header.navbar-container .navbar-icon {
+  display: none;
+  color: #f9f7fc;
+  font-size: 24px;
+}
+
+header.navbar-container .navbar-icon:active {
+  color: #93735b;
+}
+
+/* Responsive Section */
+@media screen and (max-width: 870px) {
+  header.navbar-container {
+    flex-wrap: wrap;
+  }
+  header.navbar-container .navbar-list {
+    width: 100%;
+  }
+  header.navbar-container .navbar-list ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  header.navbar-container .navbar-list ul li:first-of-type {
+    padding-top: 0.4rem;
+  }
+  header.navbar-container .navbar-list ul.hidden {
+    display: none;
+  }
+  header.navbar-container .navbar-icon {
+    display: flex;
+    align-items: center;
+  }
+}
