@@ -20,9 +20,15 @@ body {
 header.navbar-container {
   top: 0;
   display: flex;
+  position: sticky;
   justify-content: space-between;
   padding: 1rem 3rem;
   background-color: #282424;
+  z-index: 100;
+}
+
+header.navbar-container .navbar-list {
+  position: relative;
 }
 
 header.navbar-container .navbar-logo img {
@@ -147,11 +153,246 @@ article.home-section .home-section-button .home-section-button-menu:active {
 article.reservation-section {
   display: flex;
   justify-content: space-around;
-  padding: 2em 1em;
+  align-items: center;
+  padding: 2.6em 1em;
   background-color: #d4894e;
 }
 
+article.reservation-section .reservation-section-content {
+  font-size: 1em;
+  font-weight: 700;
+  color: #282424;
+}
+
+article.reservation-section .reservation-section-button button {
+  background-color: transparent;
+  border: 1.6px solid #282424;
+  padding: 0.6em 1.4em;
+  cursor: pointer;
+}
+
+article.reservation-section .reservation-section-button a {
+  font-size: 0.9em;
+  font-weight: 550;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #282424;
+}
+
+article.reservation-section .reservation-section-button:hover {
+  background-color: #282424;
+  border: none;
+}
+
+article.reservation-section .reservation-section-button:hover a {
+  color: #d4894e;
+}
+
+/* Menus */
+article.menus-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 1em;
+  background-color: #282424;
+  min-height: 100vh;
+}
+
+article.menus-section .menus-section-title {
+  color: #f9f7fc;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+article.menus-section .menus-section-description {
+  color: #d4894e;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6em;
+  font-weight: 450;
+  text-transform: uppercase;
+  border-bottom: 1.2px solid #d4894e;
+  padding-bottom: 0.4em;
+}
+
+div.menus-section-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4em 5em;
+  gap: 3em;
+}
+
+div.menus-section-content .menus-beef-noodles,
+div.menus-section-content .menus-veggie-noodles,
+div.menus-section-content .menus-egg-noodles,
+div.menus-section-content .menus-spicy-noodles,
+div.menus-section-content .menus-original-noodles,
+div.menus-section-content .menus-yammie-noodles {
+  display: flex;
+  align-items: center;
+  color: #f9f7fc;
+  gap: 2em;
+  flex-basis: calc(50% - 2em);
+  flex-grow: 0;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-image,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-image,
+div.menus-section-content .menus-egg-noodles .egg-noodles-image,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-image,
+div.menus-section-content .menus-original-noodles .original-noodles-image,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-image {
+  display: flex;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-image img,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-image img,
+div.menus-section-content .menus-egg-noodles .egg-noodles-image img,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-image img,
+div.menus-section-content .menus-original-noodles .original-noodles-image img,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-image img {
+  width: 12em;
+  padding: 0em 2.2em;
+  border-right: 1.4px solid #d4894e;
+}
+
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-image img {
+  filter: brightness(85%);
+}
+
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-image img {
+  filter: brightness(105%);
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content,
+div.menus-section-content .menus-original-noodles .original-noodles-content,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-top,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-top,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top,
+div.menus-section-content .menus-original-noodles .original-noodles-content-top,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-top h1,
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-bottom p,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top h1,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-bottom p,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-top h1,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-bottom p,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top h1,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom p,
+div.menus-section-content .menus-original-noodles .original-noodles-content-top h1,
+div.menus-section-content .menus-original-noodles .original-noodles-content-bottom p,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top h1,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom p {
+  margin: 0;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-top h1,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top h1,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-top h1,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top h1,
+div.menus-section-content .menus-original-noodles .original-noodles-content-top h1,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top h1 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 650;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-top div,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top div,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-top div,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top div,
+div.menus-section-content .menus-original-noodles .original-noodles-content-top div,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top div {
+  color: #d4894e;
+  font-weight: 700;
+}
+
+div.menus-section-content .menus-beef-noodles .beef-noodles-content-bottom,
+div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-bottom,
+div.menus-section-content .menus-egg-noodles .egg-noodles-content-bottom,
+div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom,
+div.menus-section-content .menus-original-noodles .original-noodles-content-bottom,
+div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
+  font-size: 0.9em;
+}
+
+.open-animation {
+  opacity: 0;
+  transition: all 1.2s;
+  filter: blur(5px);
+  transform: translateY(10%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+}
+
 /* Responsive Section */
+@media screen and (max-width: 1055px) {
+  /* Menus */
+  article.menus-section .menus-section-title {
+    font-size: 1.3em;
+  }
+  article.menus-section .menus-section-description {
+    font-size: 1.5em;
+  }
+  div.menus-section-content {
+    padding: 4em 3em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-image img,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-image img,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-image img,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-image img,
+  div.menus-section-content .menus-original-noodles .original-noodles-image img,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-image img {
+    width: 8.6em;
+    padding: 0;
+    padding-right: 2em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-top h1,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top h1,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-top h1,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top h1,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-top h1,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top h1 {
+    font-size: 1em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-top div,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top div,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-top div,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top div,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-top div,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top div {
+    font-size: 0.9em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-bottom,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-bottom,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-bottom,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-bottom,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
+    font-size: 0.78em;
+  }
+}
+
 @media screen and (max-width: 870px) {
   /* Header */
   header.navbar-container {
@@ -174,6 +415,7 @@ article.reservation-section {
     display: flex;
     align-items: center;
   }
+  /* Home */
   article.home-section .home-section-content h1 {
     font-size: 2.6em;
   }
@@ -186,5 +428,64 @@ article.reservation-section {
   article.home-section .home-section-button .home-section-button-menu,
   article.home-section .home-section-button .home-section-button-reservation {
     padding: 0.8em 1.2em;
+  }
+  /* Reservation */
+  article.reservation-section {
+    flex-direction: column;
+    gap: 1.2em;
+  }
+  article.reservation-section .reservation-section-content {
+    font-size: 0.9em;
+  }
+  article.reservation-section .reservation-section-button a {
+    font-size: 0.8em;
+  }
+  /* Menus */
+  div.menus-section-content {
+    flex-direction: column;
+  }
+  article.menus-section .menus-section-title {
+    font-size: 1.2em;
+  }
+  article.menus-section .menus-section-description {
+    font-size: 1.4em;
+  }
+  div.menus-section-content {
+    padding: 3.2em 1em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-image img,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-image img,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-image img,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-image img,
+  div.menus-section-content .menus-original-noodles .original-noodles-image img,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-image img {
+    width: 6em;
+    padding: 0;
+    padding-right: 1em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-top h1,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top h1,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-top h1,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top h1,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-top h1,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top h1 {
+    font-size: 0.9em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-top div,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-top div,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-top div,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-top div,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-top div,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-top div {
+    font-size: 0.9em;
+  }
+  div.menus-section-content .menus-beef-noodles .beef-noodles-content-bottom,
+  div.menus-section-content .menus-veggie-noodles .veggie-noodles-content-bottom,
+  div.menus-section-content .menus-egg-noodles .egg-noodles-content-bottom,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom,
+  div.menus-section-content .menus-spicy-noodles .spicy-noodles-content-bottom,
+  div.menus-section-content .menus-original-noodles .original-noodles-content-bottom,
+  div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
+    font-size: 0.8em;
   }
 }
