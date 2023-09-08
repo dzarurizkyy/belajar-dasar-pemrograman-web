@@ -135,12 +135,14 @@ article.home-section .home-section-button .home-section-button-reservation {
   color: black;
   border: 0;
   background-color: #d4894e;
+  cursor: pointer;
 }
 
 article.home-section .home-section-button .home-section-button-menu {
   color: #93735b;
   border: 2px solid #d4894e;
   background-color: transparent;
+  cursor: pointer;
 }
 
 article.home-section .home-section-button .home-section-button-menu:active {
@@ -195,7 +197,6 @@ article.menus-section {
   align-items: center;
   padding: 4em 1em;
   background-color: #282424;
-  min-height: 100vh;
 }
 
 article.menus-section .menus-section-title {
@@ -332,16 +333,111 @@ div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
   font-size: 0.9em;
 }
 
-.open-animation {
+.menus-animation {
   opacity: 0;
   transition: all 1.2s;
   filter: blur(5px);
   transform: translateY(10%);
 }
 
+.dailypicks-animation {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.2s;
+}
+
 .show {
   opacity: 1;
   filter: blur(0px);
+  transform: translateX(0%);
+  transition: all 1.5s;
+}
+
+/* Aside Section */
+aside.dailypicks-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+aside.dailypicks-container .dailypicks-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2.2em 3em;
+  margin-left: 46%;
+  margin-right: 6%;
+  background-color: #282424;
+  opacity: 76%;
+}
+
+aside.dailypicks-container .dailypicks-img {
+  width: 100%;
+  max-height: 506px;
+}
+
+aside.dailypicks-container .dailypicks-img img {
+  display: flex;
+  width: 100%;
+  max-height: 428px;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(0.4px);
+  filter: brightness(84%);
+}
+
+aside.dailypicks-container .dailypicks-content h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  color: #d4894e;
+}
+
+aside.dailypicks-container .dailypicks-content h2 {
+  margin: 0;
+  margin-bottom: 0.3em;
+  font-size: 1.7em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: right;
+  color: #f9f7fc;
+}
+
+aside.dailypicks-container .dailypicks-content p {
+  margin: 0;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  text-align: right;
+  color: #f9f7fc;
+}
+
+aside.dailypicks-container .dailypicks-content button {
+  background-color: transparent;
+  border: 1.8px solid #d4894e;
+  padding: 0.6em 1.6em;
+  cursor: pointer;
+}
+
+aside.dailypicks-container .dailypicks-content button a {
+  color: #d4894e;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+aside.dailypicks-container .dailypicks-content button:hover {
+  background-color: #d4894e;
+  border: none;
+  opacity: 100%;
+}
+
+aside.dailypicks-container .dailypicks-content button:hover a {
+  color: #282424;
 }
 
 /* Responsive Section */
@@ -487,5 +583,53 @@ div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
   div.menus-section-content .menus-original-noodles .original-noodles-content-bottom,
   div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
     font-size: 0.8em;
+  }
+  /* Daily Picks */
+  aside.dailypicks-container {
+    max-height: 500px;
+  }
+  aside.dailypicks-container .dailypicks-content {
+    margin-right: 0%;
+    margin-left: 50%;
+    padding: 20% 6%;
+  }
+  aside.dailypicks-container .dailypicks-content h1 {
+    font-size: 0.8em;
+  }
+  aside.dailypicks-container .dailypicks-content h2 {
+    font-size: 1.1em;
+  }
+  aside.dailypicks-container .dailypicks-content p {
+    font-size: 0.6em;
+  }
+  aside.dailypicks-container .dailypicks-content button {
+    padding: 0.4em 1.2em;
+    margin: 0;
+  }
+  aside.dailypicks-container .dailypicks-content button a {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-device-width: 868px) and (min-device-width: 515px) {
+  aside.dailypicks-container {
+    max-height: 500px;
+  }
+  aside.dailypicks-container .dailypicks-content {
+    margin-right: 0%;
+    margin-left: 50%;
+    padding: 20% 6%;
+  }
+  aside.dailypicks-container .dailypicks-content h1 {
+    font-size: 1.1em;
+  }
+  aside.dailypicks-container .dailypicks-content h2 {
+    font-size: 1.5em;
+  }
+  aside.dailypicks-container .dailypicks-content p {
+    font-size: 0.7em;
+  }
+  aside.dailypicks-container .dailypicks-content button a {
+    font-size: 0.9em;
   }
 }

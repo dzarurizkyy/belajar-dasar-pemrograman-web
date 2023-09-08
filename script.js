@@ -1,7 +1,8 @@
 // Variable
 const navbarIconList = document.getElementById("navbar-icon-list");
 const navbarListContent = document.getElementById("navbar-list-content");
-const openAnimation = document.querySelectorAll(".open-animation");
+const menusAnimation = document.querySelectorAll(".menus-animation");
+const dailypicksAnimation = document.querySelectorAll(".dailypicks-animation");
 
 // Functions
 navbarIconList.addEventListener("click", () => {
@@ -19,4 +20,5 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-openAnimation.forEach((el) => observer.observe(el));
+menusAnimation.forEach((el) => observer.observe(el));
+dailypicksAnimation.forEach((el) => observer.observe(el));
