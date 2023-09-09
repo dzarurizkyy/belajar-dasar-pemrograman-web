@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #282424;
+  overflow-x: hidden;
 }
 
 /* Header Section */
@@ -429,7 +430,7 @@ aside.dailypicks-container .dailypicks-content button:hover a {
   color: #282424;
 }
 
-/* Aboutus Section */
+/* AboutUs Section */
 div.contactus-container {
   display: flex;
   align-items: center;
@@ -554,6 +555,31 @@ div.contactus-container .contactus-form form button:active {
   color: #282424;
 }
 
+/* Copyright Section */
+div.copyright-container {
+  display: flex;
+  background-color: #1f1b1b;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 8em;
+}
+
+div.copyright-container .copyright-content {
+  color: #f9f7fc;
+  font-size: 0.97em;
+  font-weight: 550;
+}
+
+div.copyright-container .copyright-socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 0.77em;
+}
+
+div.copyright-container .copyright-socialmedia img {
+  width: 2em;
+}
+
 /* Animation CSS */
 .menus-animation {
   opacity: 0;
@@ -571,9 +597,9 @@ div.contactus-container .contactus-form form button:active {
 
 .contactus-animation {
   opacity: 0;
-  transition: all 1s;
+  transition: all 2s;
   filter: blur(5px);
-  transform: translateY(10%);
+  transform: translateY(20%);
 }
 
 .show {
@@ -787,6 +813,18 @@ div.contactus-container .contactus-form form button:active {
   }
   div.contactus-container .contactus-form form button {
     align-self: center;
+  }
+  /* Copyright Section */
+  div.copyright-container {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1.5em 3em;
+  }
+  div.copyright-container .copyright-content {
+    font-size: 0.87em;
+  }
+  div.copyright-container .copyright-socialmedia img {
+    width: 1.87em;
   }
 }
 
