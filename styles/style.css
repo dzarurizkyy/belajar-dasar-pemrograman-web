@@ -123,6 +123,7 @@ article.home-section .home-section-button {
 
 article.home-section .home-section-button a {
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 article.home-section .home-section-button .home-section-button-menu,
@@ -132,23 +133,32 @@ article.home-section .home-section-button .home-section-button-reservation {
 }
 
 article.home-section .home-section-button .home-section-button-reservation {
-  color: black;
   border: 0;
   background-color: #d4894e;
   cursor: pointer;
 }
 
+article.home-section .home-section-button .home-section-button-reservation a {
+  color: black;
+}
+
 article.home-section .home-section-button .home-section-button-menu {
-  color: #93735b;
   border: 2px solid #d4894e;
   background-color: transparent;
   cursor: pointer;
 }
 
+article.home-section .home-section-button .home-section-button-menu a {
+  color: #d4894e;
+}
+
 article.home-section .home-section-button .home-section-button-menu:active {
   border: 0;
-  color: black;
   background-color: #d4894e;
+}
+
+article.home-section .home-section-button .home-section-button-menu:active a {
+  color: black;
 }
 
 /* Reservation Section */
@@ -333,27 +343,6 @@ div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
   font-size: 0.9em;
 }
 
-.menus-animation {
-  opacity: 0;
-  transition: all 1.2s;
-  filter: blur(5px);
-  transform: translateY(10%);
-}
-
-.dailypicks-animation {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(100%);
-  transition: all 1.2s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0px);
-  transform: translateX(0%);
-  transition: all 1.5s;
-}
-
 /* Aside Section */
 aside.dailypicks-container {
   position: relative;
@@ -438,6 +427,160 @@ aside.dailypicks-container .dailypicks-content button:hover {
 
 aside.dailypicks-container .dailypicks-content button:hover a {
   color: #282424;
+}
+
+/* Aboutus Section */
+div.contactus-container {
+  display: flex;
+  align-items: center;
+  padding: 6em 8em;
+  gap: 10em;
+}
+
+div.contactus-container .contactus-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.4em;
+}
+
+div.contactus-container .contactus-content h1 {
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: 800;
+  color: #f9f7fc;
+}
+
+div.contactus-container .contactus-content p {
+  margin: 0;
+  margin-bottom: 1.4em;
+  font-size: 0.87em;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5em;
+  color: #f9f7fc;
+}
+
+div.contactus-content .contactus-content-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+  align-items: flex-start;
+}
+
+div.contactus-content .contactus-content-contact a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.contactus-content .contactus-content-contact .contactus-content-contact-phone,
+div.contactus-content .contactus-content-contact .contactus-content-contact-location,
+div.contactus-content .contactus-content-contact .contactus-content-contact-email {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+div.contactus-content .contactus-content-contact .contactus-content-contact-phone i,
+div.contactus-content .contactus-content-contact .contactus-content-contact-location i,
+div.contactus-content .contactus-content-contact .contactus-content-contact-email i {
+  color: #d4894e;
+  font-size: 1.2em;
+}
+
+div.contactus-content .contactus-content-contact .contactus-content-contact-phone div,
+div.contactus-content .contactus-content-contact .contactus-content-contact-location div,
+div.contactus-content .contactus-content-contact .contactus-content-contact-email div {
+  color: #f9f7fc;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+div.contactus-content .contactus-content-contact .contactus-content-contact-phone div:hover,
+div.contactus-content .contactus-content-contact .contactus-content-contact-location div:hover,
+div.contactus-content .contactus-content-contact .contactus-content-contact-email div:hover {
+  color: #d4894e;
+  font-weight: 700;
+}
+
+div.contactus-container .contactus-form {
+  width: 50%;
+}
+
+div.contactus-container .contactus-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+div.contactus-container .contactus-form form input,
+div.contactus-container .contactus-form form textarea {
+  border: 1px solid #f9f7fc;
+  color: #f9f7fc;
+  background-color: transparent;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+div.contactus-container .contactus-form form input[placeholder="Enter Name"],
+div.contactus-container .contactus-form form input[placeholder="Enter Email"] {
+  width: 100%;
+  padding: 0.9em;
+  cursor: pointer;
+}
+
+div.contactus-container .contactus-form form textarea {
+  width: 100%;
+  height: 6em;
+  padding: 0.9em;
+  font-size: 0.85em;
+  resize: none;
+  cursor: pointer;
+}
+
+div.contactus-container .contactus-form form button {
+  width: 11em;
+  padding: 0.9em;
+  font-weight: 600;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  color: #d4894e;
+  border: 2px solid #d4894e;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+div.contactus-container .contactus-form form button:active {
+  background-color: #d4894e;
+  color: #282424;
+}
+
+/* Animation CSS */
+.menus-animation {
+  opacity: 0;
+  transition: all 1.2s;
+  filter: blur(5px);
+  transform: translateY(10%);
+}
+
+.dailypicks-animation {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.2s;
+}
+
+.contactus-animation {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateY(10%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+  transition: all 1.5s;
 }
 
 /* Responsive Section */
@@ -609,9 +752,46 @@ aside.dailypicks-container .dailypicks-content button:hover a {
   aside.dailypicks-container .dailypicks-content button a {
     font-size: 0.7em;
   }
+  /* Contact Us */
+  div.contactus-container {
+    flex-direction: column;
+    gap: 2.8em;
+    padding: 4em 3em;
+  }
+  div.contactus-container .contactus-content {
+    width: 100%;
+  }
+  div.contactus-container .contactus-content h1 {
+    font-size: 1.6em;
+    text-align: left;
+  }
+  div.contactus-container .contactus-content p {
+    font-size: 0.87em;
+    text-align: left;
+  }
+  div.contactus-content .contactus-content-contact .contactus-content-contact-phone,
+  div.contactus-content .contactus-content-contact .contactus-content-contact-location,
+  div.contactus-content .contactus-content-contact .contactus-content-contact-email {
+    gap: 1.5em;
+  }
+  div.contactus-content .contactus-content-contact .contactus-content-contact-phone div,
+  div.contactus-content .contactus-content-contact .contactus-content-contact-location div,
+  div.contactus-content .contactus-content-contact .contactus-content-contact-email div {
+    font-size: 0.83em;
+  }
+  div.contactus-container .contactus-form {
+    width: 100%;
+  }
+  div.contactus-container .contactus-form form textarea {
+    margin-bottom: 0.8em;
+  }
+  div.contactus-container .contactus-form form button {
+    align-self: center;
+  }
 }
 
 @media screen and (max-device-width: 868px) and (min-device-width: 515px) {
+  /* Dailypicks */
   aside.dailypicks-container {
     max-height: 500px;
   }

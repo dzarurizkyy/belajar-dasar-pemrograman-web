@@ -3,6 +3,7 @@ const navbarIconList = document.getElementById("navbar-icon-list");
 const navbarListContent = document.getElementById("navbar-list-content");
 const menusAnimation = document.querySelectorAll(".menus-animation");
 const dailypicksAnimation = document.querySelectorAll(".dailypicks-animation");
+const contactusAnimation = document.querySelectorAll(".contactus-animation");
 
 // Functions
 navbarIconList.addEventListener("click", () => {
@@ -22,3 +23,4 @@ const observer = new IntersectionObserver((entries) => {
 
 menusAnimation.forEach((el) => observer.observe(el));
 dailypicksAnimation.forEach((el) => observer.observe(el));
+contactusAnimation.forEach((el) => observer.observe(el));

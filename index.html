@@ -51,8 +51,8 @@
             <h1>Celestial Bites</h1>
             <p>The Best Restaurant In Town</p>
             <div class="home-section-button">
-              <button class="home-section-button-menu"><a>View Menu</a></button>
-              <button class="home-section-button-reservation"><a>Book Now</a></button>
+              <button class="home-section-button-menu"><a href="#menus">View Menu</a></button>
+              <button class="home-section-button-reservation"><a href="#reservation">Book Now</a></button>
             </div>
           </div>
         </article>
@@ -182,6 +182,55 @@
         </div>
       </aside>
     </main>
+    <!-- Footer Section -->
+    <footer>
+      <!-- Contact Us -->
+      <div id="contactus" class="contactus-container contactus-animation">
+        <!-- Content -->
+        <div class="contactus-content">
+          <div class="contactus-content-title">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="contactus-content-description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam provident, placeat saepe perspiciatis eum recusandae sint explicabo ipsum doloribus voluptas.</p>
+          </div>
+          <div class="contactus-content-contact">
+            <!-- Phone Number -->
+            <a href="https://wa.me/087760331994" target="_blank">
+              <div class="contactus-content-contact-phone">
+                <i class="ph ph-device-mobile"></i>
+                <div>087760331994</div>
+              </div>
+            </a>
+            <!-- Location -->
+            <a href="https://goo.gl/maps/rUqiiEdcY8VPJSM16" target="_blank">
+              <div class="contactus-content-contact-location">
+                <i class="ph ph-map-pin"></i>
+                <div>Kec Rungkut, Surabaya</div>
+              </div>
+            </a>
+            <!-- Email -->
+            <a href="mailto: dzarurizkybusiness@gmail.com" target="_blank">
+              <div class="contactus-content-contact-email">
+                <i class="ph ph-envelope-simple"></i>
+                <div>dzarurizkybusiness@gmail.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="contactus-form">
+          <form id="submit-form" action="script.js" target="_blank">
+            <div><input type="text" placeholder="Enter Name" required /></div>
+            <div><input type="email" placeholder="Enter Email" required /></div>
+            <div><textarea name="message" placeholder="Type your message"></textarea></div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="copyright-container"></div>
+    </footer>
     <!-- External Javascript -->
     <script src="script.js"></script>
   </body>
