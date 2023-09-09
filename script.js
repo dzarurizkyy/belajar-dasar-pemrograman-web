@@ -5,11 +5,12 @@ const menusAnimation = document.querySelectorAll(".menus-animation");
 const dailypicksAnimation = document.querySelectorAll(".dailypicks-animation");
 const contactusAnimation = document.querySelectorAll(".contactus-animation");
 
-// Functions
+// Responsive Navbar
 navbarIconList.addEventListener("click", () => {
   navbarListContent.classList.toggle("hidden");
 });
 
+// Scroll Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);

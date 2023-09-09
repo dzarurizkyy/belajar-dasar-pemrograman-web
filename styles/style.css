@@ -201,7 +201,7 @@ article.reservation-section .reservation-section-button:hover a {
   color: #d4894e;
 }
 
-/* Menus */
+/* Menus Section */
 article.menus-section {
   display: flex;
   flex-direction: column;
@@ -344,7 +344,7 @@ div.menus-section-content .menus-yammie-noodles .yammie-noodles-content-bottom {
   font-size: 0.9em;
 }
 
-/* Aside Section */
+/* Daily Picks Section */
 aside.dailypicks-container {
   position: relative;
   display: flex;
@@ -430,7 +430,7 @@ aside.dailypicks-container .dailypicks-content button:hover a {
   color: #282424;
 }
 
-/* AboutUs Section */
+/* Contact Us Section */
 div.contactus-container {
   display: flex;
   align-items: center;
@@ -610,6 +610,8 @@ div.copyright-container .copyright-socialmedia img {
 }
 
 /* Responsive Section */
+
+/* Tablet */
 @media screen and (max-width: 1055px) {
   /* Menus */
   article.menus-section .menus-section-title {
@@ -658,6 +660,7 @@ div.copyright-container .copyright-socialmedia img {
   }
 }
 
+/* Smartphone */
 @media screen and (max-width: 870px) {
   /* Header */
   header.navbar-container {
@@ -814,7 +817,7 @@ div.copyright-container .copyright-socialmedia img {
   div.contactus-container .contactus-form form button {
     align-self: center;
   }
-  /* Copyright Section */
+  /* Copyright */
   div.copyright-container {
     flex-direction: column;
     gap: 1.5em;
@@ -828,8 +831,9 @@ div.copyright-container .copyright-socialmedia img {
   }
 }
 
+/* Selected Display */
 @media screen and (max-device-width: 868px) and (min-device-width: 515px) {
-  /* Dailypicks */
+  /* Daily Picks */
   aside.dailypicks-container {
     max-height: 500px;
   }
