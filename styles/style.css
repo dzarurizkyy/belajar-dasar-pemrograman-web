@@ -126,29 +126,27 @@ article.home-section .home-section-button a {
   text-decoration: none;
 }
 
-article.home-section .home-section-button .home-section-button-menu,
-article.home-section .home-section-button .home-section-button-reservation {
-  font-weight: 550;
-  padding: 1em 1.6em;
-}
-
-article.home-section .home-section-button .home-section-button-reservation {
-  border: 0;
-  background-color: #d4894e;
-  cursor: pointer;
-}
-
-article.home-section .home-section-button .home-section-button-reservation a {
-  color: black;
-}
-
 article.home-section .home-section-button .home-section-button-menu {
+  font-weight: 550;
+  padding: 0.86em 1.5em;
   border: 2px solid #d4894e;
   background-color: transparent;
   cursor: pointer;
 }
 
-article.home-section .home-section-button .home-section-button-menu a {
+article.home-section .home-section-button .home-section-button-reservation {
+  font-weight: 550;
+  padding: 1em 1.6em;
+  border: 0;
+  background-color: #d4894e;
+  cursor: pointer;
+}
+
+article.home-section .home-section-button .home-section-button-reservation div {
+  color: #282424;
+}
+
+article.home-section .home-section-button .home-section-button-menu div {
   color: #d4894e;
 }
 
@@ -157,8 +155,8 @@ article.home-section .home-section-button .home-section-button-menu:active {
   background-color: #d4894e;
 }
 
-article.home-section .home-section-button .home-section-button-menu:active a {
-  color: black;
+article.home-section .home-section-button .home-section-button-menu:active div {
+  color: #282424;
 }
 
 /* Reservation Section */
@@ -694,10 +692,13 @@ div.copyright-container .copyright-socialmedia img {
   article.home-section .home-section-content button {
     font-size: 0.8em;
   }
-  article.home-section .home-section-button .home-section-button-menu,
+  article.home-section .home-section-button .home-section-button-menu {
+    padding: 0.66em 1.1em;
+  }
   article.home-section .home-section-button .home-section-button-reservation {
     padding: 0.8em 1.2em;
   }
+
   /* Reservation */
   article.reservation-section {
     flex-direction: column;
